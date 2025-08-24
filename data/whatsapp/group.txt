@@ -1,0 +1,5 @@
+24/08/25, 10:15 - John Doe: Opening for Frontend Developer at ABC Corp. Apply here: https://forms.gle/example
+24/08/25, 10:17 - Jane Smith: We’re hiring Data Scientist. Email resumes to careers@xyz.com
+24/08/25, 10:22 - Mike: UI/UX Designer position open at Startup Inc. Contact hr@startup.in
+24/08/25, 10:30 - Rebecca: Accountant opening — fill out form: https://company.com/apply
+24/08/25, 10:45 - Sarah: Join our team as Backend Developer. Send resume to jobs@techhub.com

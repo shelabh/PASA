@@ -1,0 +1,15 @@
+# Bytecode
+__pycache__/
+*.pyc
+
+# Environments
+.venv/
+.env
+
+# Playwright data
+profile/
+
+# DB and logs
+pasa.db
+*.db
+logs/

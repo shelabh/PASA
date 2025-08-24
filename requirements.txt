@@ -1,0 +1,13 @@
+python-dotenv
+playwright
+sentence-transformers
+spacy
+fastapi
+uvicorn
+apscheduler
+requests
+jinja2
+sqlalchemy>=2.0
+psycopg2-binary
+alembic
+sqlmodel
