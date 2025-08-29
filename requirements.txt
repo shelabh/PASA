@@ -13,3 +13,5 @@ alembic
 sqlmodel
 bs4
 openai>=1.40.0
+firecrawl
+pypdf
