@@ -1,5 +1,5 @@
 # src/models/models.py
-from sqlalchemy import Column, String, DateTime, Text
+from sqlalchemy import Column, String, DateTime, Text, LargeBinary
 from src.db.database import Base
 
 
@@ -28,6 +28,12 @@ class UserProfile(Base):
     linkedin = Column(String, nullable=True)
     twitter = Column(String, nullable=True)
     resume_link = Column(Text, nullable=True)
+    # Rich profile context used to tailor applications
+    profile_context = Column(Text, nullable=True)
+    # Store resume contents to allow attaching to outgoing emails
+    resume_bytes = Column(LargeBinary, nullable=True)
+    resume_filename = Column(String, nullable=True)
+    resume_mime = Column(String, nullable=True)
 
     def __repr__(self):
         return f"<UserProfile(user_id={self.user_id}, name={self.name})>"
