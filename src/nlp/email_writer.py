@@ -3,12 +3,7 @@ from typing import Tuple
 from openai import OpenAI
 
 
-def _get_client() -> OpenAI:
-    api_key = os.getenv("GROQ_API_KEY")
-    if not api_key:
-        raise ValueError("GROQ_API_KEY is not set")
-    base_url = os.getenv("GROQ_BASE_URL", "https://api.groq.com/openai/v1")
-    return OpenAI(api_key=api_key, base_url=base_url)
+from src.utils.llm_client import get_llm_client, get_default_model
 
 
 def generate_email_subject_body(*, profile_name: str, profile_email: str, profile_context: str | None, job_summary: str, job_link: str | None = None) -> Tuple[str, str]:
@@ -16,8 +11,8 @@ def generate_email_subject_body(*, profile_name: str, profile_email: str, profil
 
     Returns (subject, body).
     """
-    model = os.getenv("GROQ_MODEL", "llama-3.1-70b-versatile")
-    client = _get_client()
+    model = get_default_model()
+    client = get_llm_client()
 
     instructions = (
         "You are an expert job application assistant. Write a concise, compelling email that is personalized to the role. "
